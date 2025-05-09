@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slider automático</title>
+</head>
+<script>
+        function preload(){
+            imgs = Array('f1.jpg','f2.jpg');
+            imgQtde = imgs.length;
+            for (i= 0 ; i < imgQtde.length;i++){
+                var preload = new Image();
+                preload.src = imgs[i];
+            }
+        }
+
+        function iniciaSlider(){
+            preload();
+            max = 2;
+            min = 1;
+            fi = min;
+            tr = true;
+            carregaFoto("f1.jpg"); // nome da foto deve ser f1 pra poder adiciona +1 e fica f2 o nome da proxima foto
+            document.getElementById("moldura").addEventListener("transitionend",fimTr);
+            tmr = setInterval(trocaFoto,4000);// chamar a função pra troca foto 4s
+        }
+        function trocaFoto(){
+            tr = false;
+                fi++;
+            if(fi > max ){
+                fi = min;
+            }
+            carregaFoto("f"+fi+".jpg");
+        }
+        
+        function fimTr(){
+            tr = true;
+        }
+        function carregaFoto(foto){ // fazer o Carregamento da Foto
+            document.getElementById("moldura").style.backgroundImage = "URL("+foto+")";
+        }
+
+        function troca(dr){
+            clearInterval(tmr);
+            if(tr){
+                tr = false;
+                fi+=dr;
+            if(fi > max ){
+                fi = min;
+            }
+            } if(fi < min ){
+                fi = max;
+            }
+            carregaFoto("f"+fi+".jpg");
+        
+        tmr = setInterval(trocaFoto,10000);
+            }
+                    
+</script>
+<style>
+    #moldura{
+        border: solid 1px black;
+        width: 600px;
+        height: 450px;
+        background-color: azure;
+        transition:background-image 2s ; /* A foto vai demora 2s pra aparecer*/
+    }
+</style>
+<body onload="iniciaSlider()">
+    <div id="moldura"></div>
+    <input type="button" value="Anterior" onclick="troca(-1)">
+    <input type="button" value="Proximo" onclick="troca(+1)">
+</body>
+</html>

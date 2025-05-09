@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="estilo.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slideshow re ajustavel a tela</title>
+</head>
+<body>
+      <section class="sliderShow-container">
+
+        <div class="slide fade">
+            <div class="numeroSlider">1/4</div>
+            <img src="imgs/s1.jpg" style="width:100%" class="imgslider">
+            <div class="textoSlider">CFB cursos - Slide1</div>
+        </div>
+
+        <div class="slide fade">
+            <div class="numeroSlider">2/4</div>
+            <img src="imgs/s2.jpg" style="width:100%" class="imgslider">
+            <div class="textoSlider">CFB cursos - Slide2</div>
+        </div>
+
+        <div class="slide fade">
+            <div class="numeroSlider">3/4</div>
+            <img src="imgs/s3.jpg" style="width:100%" class="imgslider">
+            <div class="textoSlider">CFB cursos - Slide3</div>
+        </div>
+
+        <div class="slide fade">
+            <div class="numeroSlider">4/4</div>
+            <img src="imgs/s4.jpg" style="width:100%" class="imgslider">
+            <div class="textoSlider">CFB cursos - Slide4</div>
+        </div>
+           
+        <a class="btnanterior" onclick="mudarSlide(-1)">&lsaquo;</a>
+        <a class="btnproximo"  onclick="mudarSlide(1)">&rsaquo;</a> 
+      </section> 
+      
+      <section style="text-align:center">
+        <span class="indicador" onclick="SlideAtual(1)"></span>
+        <span class="indicador" onclick="SlideAtual(2)"></span>
+        <span class="indicador" onclick="SlideAtual(3)"></span>
+        <span class="indicador" onclick="SlideAtual(4)"></span>
+      </section>
+</body>
+<script type="text/javascript" src="script.js"></script>
+</html>

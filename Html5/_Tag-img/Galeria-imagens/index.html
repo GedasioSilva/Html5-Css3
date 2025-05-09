@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="estilo.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeria de imagens</title>
+</head>
+<body>
+    <section class="galeria">
+        <img src="imgs/s1.jpg" alt=" Img1" onclick="mostraImagem(this)">
+        <img src="imgs/s2.jpg" alt=" Img2" onclick="mostraImagem(this)">
+        <img src="imgs/s3.jpg" alt=" Img3" onclick="mostraImagem(this)">
+        <img src="imgs/s4.jpg" alt=" Img4" onclick="mostraImagem(this)">
+    </section>
+
+    <section class="conteiner">
+        <span onclick="this.parentElement.style.display='none';" class="btnfechar">&times;</span>
+        <img id="imgemGrande">
+    </section>
+    
+    <section>
+        <p>Galeria de Imagens</p>
+    </section>
+
+</body>
+<script type="text/javascript" src="escript.js"></script>
+</html>

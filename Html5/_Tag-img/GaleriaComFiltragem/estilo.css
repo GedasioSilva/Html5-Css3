@@ -1,0 +1,32 @@
+.galeria{
+    max-width:1000px;
+    margin: auto;
+    padding: 10px;
+    border-radius:10px;
+    border: 1px solid black;
+}
+.imagens{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+.img{
+    max-width: 30%;
+    padding: 10px;
+}
+.btn{
+    border-radius: 8px;
+    color: white;
+    background-color: rgb(134, 129, 129);
+}
+.btn:hover{
+    transition: 0.5s;
+    background-color: black;
+    color: white;
+}
+.ativo{
+    border: none;
+    background-color: red;
+    border: 1px solid black;
+}

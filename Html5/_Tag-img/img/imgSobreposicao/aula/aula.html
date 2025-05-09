@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imagem de Sobreposição</title>
+</head>
+<script>
+
+    function preload(){ // função pra fazer um carregamento Rapido;
+        imgs = Array("model-2373407_1920.jpg","crab-1990198.jpg"); // guarda as imagens
+        imgQtde = imgs.length;
+    for(i = 0 ; i < imgQtde.length;i++ ){
+        var preloadimg = new Image();
+        preloadimg.src=imgs[i];
+    }
+    }
+  
+    function troca(obj,imgtroca){
+        obj.src=imgtroca;     
+    }
+</script>
+<body onload="preload()">
+       
+    <img id="bt1" src="model-2373407_1920.jpg" onmousemove="troca(this,'crab-1990198.jpg')" onmouseout="troca(this,'model-2373407_1920.jpg')"> 
+    <img src="" alt="">
+    
+</body>
+</html>

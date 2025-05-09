@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="estilo.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeria de imagens filtrável</title>
+</head>
+<body>
+    <section class="galeria">
+        <header id="cabecalhoGaleria">
+            <button class="btn ativo" onclick="gerenciarImagens('tudo')">Tudo</button>
+            <button class="btn" onclick="gerenciarImagens('c1')">Cursos 1</button>
+            <button class="btn" onclick="gerenciarImagens('c2')">Cursos 2</button>
+            <button class="btn" onclick="gerenciarImagens('c3')">Cursos 3</button>  
+        </header>
+
+        <article class="imagens">
+            <img src="imgs/s1.jpg" class="img c1" >
+            <img src="imgs/s2.jpg" class="img c1">
+            <img src="imgs/s3.jpg" class="img c2" >
+            <img src="imgs/s4.jpg" class="img c2" >
+            <img src="imgs/s1.jpg" class="img c3" >
+            <img src="imgs/s3.jpg" class="img c3" >
+        </article>
+
+    </section>
+</body>
+<script type="text/javascript" src="escript.js"></script>
+</html>
