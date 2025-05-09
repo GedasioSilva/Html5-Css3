@@ -1,0 +1,35 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+*{
+    box-sizing: border-box;
+}
+.menuConteiner{
+    width:200px;
+    background-color: #ddd;
+    padding: 15px 0px; /*colocando espaço encima e em baixo*/
+}
+.menuConteiner li a{
+    padding: 12px;
+    text-decoration: none;
+    color: black;
+    display: block;/* cada um no espaço de bloco*/
+}
+
+.menuConteiner h2{
+    text-align: center;
+}
+#pesquisa{
+    width: 100%;
+    font-size: 18px;
+    padding: 11px;
+    border: 1px solid #ddd;
+}
+#menu{
+    list-style-type: none;/* pra tirar os as bolinhas de uma "li" */
+    padding: 0px;
+    margin: 0px;
+}
+#menu li a:hover{
+    background-color: #eee;
+}

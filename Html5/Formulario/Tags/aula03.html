@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>(input input tel, number, search)</title>
+</head>
+<style>
+     form{
+            background-color: rgb(160, 160, 33);
+            border-radius: 10px;
+            margin: 15px;
+            padding: 15px;
+        }
+        input{
+            border-radius: 10px;
+            width: 150px;
+        }
+</style>
+<body>
+    <form action="" method="post" name="fformu" enctype="multipart/form-data">
+
+        <label>Telefone </label>
+        <input type="tel"  name="telefone" pattern="\([0-9]{2}\)[9]{1}[0-9]{4}-[0-9]{4}" placeholder="(xx)9xxxx-xxxx"> <!-- padrao patten-->
+        <br>
+
+        <label>Senhar</label>
+        <input type="password"  name="passoword" pattern="[a-zA-Z0-9]{5}" placeholder=""> <!-- Senhar VAI TER letras e numeros de a ate z maiuscula e minuscula senhar de no minino 5 digitos-->
+        <br>
+
+        <label>Números</label>
+        <input type="number" step="2" min="0" max="10" > <!-- -->
+        <br>
+
+        <label>Pesquisa</label>
+        <input type="search" name="fpesquisa" > <!-- campo de pesquisa -->
+        <br>
+
+        <label>selecione o arquivo</label>
+        <input type="file" name="farquivo" accept=",.jpg,.gif,.png" multiple> <!-- pesquisa arquivo pra fazer o envio -->
+        <br>
+
+        <label>Digite o URL</label>
+        <input type="url" name="furl" pattern="" > <!-- campo pra receber URL -->
+        <br>
+
+        <input type="submit" value="Enviar">
+    </form> 
+</body>
+</html>

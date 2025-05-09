@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu de ícones fixo</title>
+</head>
+    <style>
+        .img{
+            width:30px;
+            height:30px;
+        }
+        .menu{
+            background-color:rgb(206, 194, 194);
+            width: 50px;
+            position:fixed;
+            top:0px;
+            left:0px;
+        }
+        .menu a{
+            display: block;/*deixar um elemento abaixo do outro*/
+            text-align: center;
+            padding: 8px;
+            transition: all 0.5s ease; /* pra quando fazer o hover de mudar de cor ir bem devagar*/
+        }
+        .menu a:hover{
+            background-color: red;
+        }
+        .ativo{ /* o elemento que fica ativo quando a pagina e abertar*/
+            background-color: rgb(232, 99, 99);
+        }
+    </style>
+<body>
+        <nav class="menu">
+            <a href="#" title="Home" class="ativo" data-menu><img class="img" src="casa.png"></a>
+            <a href="#" data-menu><img class="img" src="Procura.png"></a>
+            <a href="#" data-menu><img class="img" src="email.png"></a>
+            <a href="#" data-menu><img class="img" src="youtube.png"></a>
+        </nav>
+</body>
+    <script>
+            const menu = document.querySelectorAll('[data-menu]'); /* seleciona todos os elementos que tem a tag data-menu*/
+         
+            menu.forEach(function(e){
+                e.addEventListener('click',function(){
+                    for(i=0;i<menu.length;i++){
+                        menu[i].classList.remove('ativo');
+                    }
+                    e.classList.add('ativo');
+                });
+            });
+    </script>
+</html>

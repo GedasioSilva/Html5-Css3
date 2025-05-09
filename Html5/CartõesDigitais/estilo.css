@@ -1,0 +1,53 @@
+html{
+    box-sizing: border-box;
+}
+*, *:before,*:after{
+   box-sizing: inherit;
+}
+#img{
+
+    width:100%;
+    height: 220px;
+}
+.colunaCartao{
+    float:left;
+    width:40%;
+    margin-bottom:15px;
+    padding: 0 8px;
+}
+@media screen and (max-width:600px) {
+    .colunaCartao{
+        width: 100%;
+        display: block;
+    }
+}
+.cartao{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.349);
+}
+.textoCartao{
+    padding: 0 16px;
+    padding-bottom: 5px;
+}
+.textoCartao::after .linhaCartao::after{
+    content:"";
+    clear: both;
+    display: table;
+}
+.titulo{
+    color: #444;
+}
+.botao{
+    border: none;
+    outline: 0;
+    display: inline-block;
+    padding: 8px;
+    color:white;
+    background-color: black;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+}
+.botao:hover{
+    background-color: #444;
+}
+

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Manipular CSS com Javascript</title>
+</head>
+<script>
+
+    function mudaCor(){
+        var opc = 1;
+        if(opc == 1){
+            document.getElementById("aula").style.backgroundColor = "Red";
+        }else if(opc == 2){
+            document.getElementById("aula").style.backgroundColor = "black";
+        }
+        
+    }
+    
+</script>
+<body onload = "mudaCor()">
+    <div id="aula">
+        CnalFessor Bruno
+
+    </div>
+</body >
+</html>

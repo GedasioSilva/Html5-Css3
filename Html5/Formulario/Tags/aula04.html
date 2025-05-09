@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario Date, time, datetime-local , month, week, hidden
+        input color, email, image </title>
+</head>
+    <style>
+        form{
+            background-color: rgb(160, 160, 33);
+            border-radius: 10px;
+            margin: 15px;
+            padding: 15px;
+        }
+        input{
+            border-radius: 10px;
+            width: 150px;
+        }
+    </style>
+<body>
+    <form action="" method="get">
+
+        <label>Hora</label>
+        <input type="time" name="f_hora" min="09:00" max="17:00" required> <!-- Pra inserir Hora-->
+        <br>
+
+        <label>Data</label>
+        <input type="date" min="2022-07-07" max="2022-12-07"> <!-- a menor data é no dia 07 menos que isso da erro-->
+
+        <br>
+
+        <label>Data e Hora</label>
+        <input type="datetime-local" name="datahora">
+
+        <br>
+
+        <label>Mês</label>
+        <input type="month"> <!-- mês -->
+        <br>
+
+        <label>Semanas</label>
+        <input type="week" > <!-- Semana -->
+        <br>
+
+        <label></label>
+        <input type="hidden" value="cfb"><!-- Pra enviar valores ocultos , no caso esse formulario vai com valor cfb-->
+        <br>
+
+        <label >Cor</label><!-- permite escolher uma cor ai vai enviar o codigo decimal da cor-->
+        <input type="color">
+        <br>
+
+        <label>email</label>
+        <input type="email" > <!-- pega dados do email // pega o padrão email -->
+        <br>
+
+        
+        <input type="image" src="" > <!-- coloco a imagem no src e essa tag envia como o botão submit -->
+        <br>
+
+        <input type="submit" value="Enviar">
+    </form>
+</body>
+</html>

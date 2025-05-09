@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+</head>
+<body>
+    <style>
+       form{
+            background-color: rgb(160, 160, 33);
+            border-radius: 10px;
+            margin: 15px;
+            padding: 15px;
+        }
+        input{
+            border-radius: 10px;
+            width: 150px;
+        }
+    </style>
+</body>
+        <form action="" method="get">
+        <fieldset disabled> <!-- disabled bloqueia os campos -->   
+            <select name="f_cor" size="1" ><!-- size só mostra 1 por vez| multiple mais de um elemento caixa de listagem-->
+                <option value="M">Masculino</option> <!-- value informa oque vai ser passado quando escolher o masculino no caso o valor M-->
+                <option value="G">Gay</option>
+                <option value="F">Femenino</option>
+            </select>
+
+            <input list="f_cores" name="f_cor"> <!-- ta usando o id do datalist tem que colocar o id pra da certo-->
+            <datalist id="f_cores">
+                <option value="red">Vermelhor</option> <!-- informa no ingles e português e ajuda aprocurar-->
+                <option value="silver">prata</option>
+                <option value="yellow">Amarelo</option>
+            </datalist>
+
+            </fieldset>
+
+            <textarea name="f_comentario"  cols="22" rows="8" maxlength="50" autofocus>  </textarea>
+
+           
+
+
+            <input type="submit" value="Enviar">
+        </form>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>formulario com Multiplas excolhas</title>
+</head>
+<body>
+    <form method="post" action="#">
+        <input id="RE" type="checkbox" name="jogos[]" value="Resident Evil">
+        <label for="RE">Resident Evil</label>
+        <input id="SH" type="checkbox" name="jogos[]" value="Silent Hill">
+        <label for="SH">Silent Hill</label>
+        <input id="TM" type="checkbox" name="jogos[]"  value="The Medium">
+        <label for="TM">The Medium</label>
+
+    </br>
+
+        <input type="number" min="1" max="20" placeholder="Digite seu nome" required/>
+
+    
+    </br>
+        <select name="jogos" multiple="yes">
+
+            <optgroup label="Xbox">
+                <option value="gears">Gears 5</option>
+                <option value="halo">Halo Infinite</option>
+            </optgroup>
+
+            <optgroup label="Nintendo Switch">
+                <option value="mario">Super Mario Odyssey</option>
+                <option value="zelda">The Legend of Zelda: Breath of the Wild</option>
+             </optgroup>
+
+        </select>
+
+        <label>Selecione os Smartphones</label>
+        <select  name="smartphones[]" multiple>
+            <option value="iphone">iPhone 13</option>
+            <option value="motoedge">Motorola Edge 20</option>
+            <option value="note20">Samsung Galaxy Note 20</option>
+        </select>
+
+        <button type="submit">Comparar</button>
+
+        <button type="submit"> Acessar </button>
+
+    </form>
+</body>
+</html>

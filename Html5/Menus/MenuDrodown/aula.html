@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu DropDown</title>
+</head>
+<script>
+
+    function MostraS1(){
+     document.getElementById('s1').style.visibility="visible"; 
+     document.getElementById('s2').style.visibility="hidden";   
+
+    }
+
+    function MostraS2(){
+        document.getElementById('s2').style.visibility="visible"; 
+        document.getElementById('s1').style.visibility="hidden";
+    }
+    function escondeSub(obj){
+        obj.style.visibility="hidden";
+    }
+
+</script>
+<style>
+        .menu{
+            background-color:darkgrey;
+            width: 95px;
+            height: 20px;
+            border-right-style:  solid;
+            border-right-width: 1px;
+            border-right-color:white;
+            padding-left: 5px;
+        }
+        .sub{
+            background-color:#8888;
+            width: 100px;
+            visibility: hidden;
+        }
+        #m1{
+            position:absolute;
+            top: 0px;
+            left: 0px;
+        }
+        #m2{
+            position:absolute;
+            top: 0px;
+            left: 101px;  
+        }
+        #s1{
+            position:absolute;
+            top: 20px;
+            left: 0px;
+        }
+        #s2{
+            position:absolute;
+            top: 20px;
+            left: 101px;
+        }
+</style>
+<body>
+        <div class="menu" id="m1" onmousemove="MostraS1()">
+           <strong>Google</strong> 
+        </div>
+        <div class="sub" id="s1" onmouseout="escondeSub(this)">
+            Youtube <br>
+            Gmail <br>
+            Maps <br>
+        </div>
+
+        <br>
+        
+        <div class="menu" id="m2" onmousemove="MostraS2()">
+           <strong>Transportes</strong> 
+        </div>
+        <div class="sub" id="s2" onmouseout="escondeSub(this)">
+            Carro <br>
+            Avião <br>
+            Navio <br>
+        </div>
+</body>
+</html>

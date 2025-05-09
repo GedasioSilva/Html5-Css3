@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+</head>
+    <style>
+        body{
+            background-color: #eeeeee;
+        }
+        label{ color: #606060;
+                font-weight: bold;
+        }
+        .bt{
+            background-color: #e49595;
+            color: white;
+            width: 75px;
+            height: 25px;
+            border: 0px;
+            cursor: pointer;
+        }
+        input:hover{
+            zoom: 130%;
+            border: solid 1px black;
+        }
+        label:hover{
+            zoom: 130%;
+        }
+        textarea:hover{
+            zoom: 130%;
+
+        }
+        select:hover{
+            zoom: 130%;
+        }
+        input:focus{
+            background-color:hotpink;
+        }
+        textarea:focus{
+            background-color: rgb(99, 105, 103);
+        }
+        
+    </style>
+
+<body>
+   <form action="" name="F_Aula" method="post">
+
+    <fieldset> <legend>Loguin</legend> <!-- fieldset é usado pra agrupar elementos-->
+        <label  for="f_Nome">Nome:</label>
+       
+        <input type="text" name="f_Nome" size="30" minlength="1" maxlength="20"> <br/>
+        <br>
+        <label for="f_senhar" >Senhar:</label>
+        <input type="password" name="f_Senha" minlength="1" maxlength="20" size="15">
+        <br/>  <br/>
+    </fieldset>
+       
+    <fieldset><legend>Esportes</legend>
+        <label> Qual Esporte você pratica?</label>
+        <br><br>
+        <input type="checkbox" name="F_Futebol[]" value="Futebol" checked><label>Futebol</label> <!--cheked valor padrão-->
+        <input type="checkbox" name="F_Natacao[]" value="Natacal">
+        <label>Natação</label><!--[] pra poder enviar mais de um-->
+        <input type="checkbox" name="F_Basquete[]" value="Basquete">
+        <label>Basquete</label> 
+        <br><!--checkbox podemos marca mais de 1-->
+        <br>
+    </fieldset>
+       
+
+        <label>Posssui Veículo?</label><br>
+        <input type="radio" name="F_Veiculo" value="s"><label>Sim</label><!--pra escolher apenas uma opeção-->
+        <input type="radio" name="F_Veiculo" value="n"><label>Não</label>
+        <br><br>
+
+        <!--select é usado pra cria uma lista em vez de usar muitos radios ou checkbox -->
+        <label>Estado:</label><br/>
+        <select name="F_Estado" required><!--Obriga a escolher pelo menos 1-->
+            <option value="MG">Minas Gerais </option>
+            <option selected value="RJ">Rio de Janeiro</option> <!-- selected é o valor padrão-->
+            <option value="SP">São Paulo</option>
+            <option value="ES">Espírito Santo</option>
+        </select><br><br/>
+
+        <label for="F_Comentario"  >Comentario:</label><br>
+        <textarea  name="F_Comentario" cols="45" rows="5"> 
+        </textarea><!--texto longos-->
+        <br><br/>
+
+        <select name="jogo" id=""> <!-- option group é pra escolher em determinados Grupos-->
+            <optgroup label="xbox">
+                <option value="forza">Forza</option>
+                <option value="gear">Gear</option>
+                <option value="Forza2">forza 2</option>
+            </optgroup>
+
+            <optgroup label="Ps">
+                <option value="godofwar">God of War</option>
+                <option value="Speder">Homem aranha</option>
+                <option value="resident">Resident</option>
+            </optgroup>
+
+            <optgroup label="pc">
+                <option value="cs">Cs</option>
+                <option value="gta">Gta</option>
+                <option value="lol">Lol</option>
+            </optgroup>
+        </select>
+        </br></br>
+        <input class="bt" type="submit" value="Enviar">
+        <input class="bt" type="reset" value="Limpar">
+        <input class="bt" type="button" value="Sem ação">
+
+   </form> 
+   <a href="aula.html">Voltar</a>
+</body>
+</html>

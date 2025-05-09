@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="Estilo.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagina FullPage</title>
+    <!-- Full page é quando os links manda pra outra parte na mesma pagina-->
+</head>
+    
+<body>
+    <header>
+        <nav>
+            <ul>
+                <!-- colocando o id da sesão quando clica no link vai chamar a sesão de acordo com a rolagem-->
+                <li><a href="#banner">Home</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#cursos">Cursos</a></li>
+                <li><a href="#canal">Canal</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section id="banner" class="banner">
+        <img src="Banner02.png">
+    </section>
+
+    <section id="sobre" class="flexivel">
+        <article class="borda0">
+            Sobre o canal
+        </article>
+        <article class="borda0">
+            Sobre Mim
+        </article>
+    </section>
+
+    <section id="cursos" class="flexivel">
+        <article class="borda0 conteinerCursos ">
+            <img src="Banner02.png" class="mini" onclick="" alt="">
+            <img src="Banner02.png" class="mini" onclick="" alt="">
+            <img src="Banner02.png" class="mini" onclick="" alt="">
+            <img src="Banner02.png" class="mini" onclick="" alt="">
+            
+        </article>
+        <article class="borda0 conteinerCursos ">
+            <img src="Banner02.png" class="mini" onclick="" alt="">
+            <img src="Banner02.png" class="mini" onclick="" alt="">
+            <img src="Banner02.png" class="mini" onclick="" alt="">
+            <img src="Banner02.png" class="mini" onclick="" alt="">
+        </article>
+        <article class="borda0 conteinerCursos ">
+            <img src="Banner02.png" class="mini" onclick="" alt="">
+            <img src="Banner02.png" class="mini" onclick="" alt="">
+            <img src="Banner02.png" class="mini" onclick="" alt="">
+            <img src="Banner02.png" class="mini" onclick="" alt="">
+        </article>
+    </section>
+
+    <section class="parallax p1" >
+    </section>
+
+    <section id="canal" class="flexivel">
+        <article  >
+            Imagem link Canal
+        </article>
+        <article class="borda0" >
+            Link Direto para o canal
+        </article> 
+    </section>
+
+    <section class="parallax p2" ><!--Class pra a imagem fica fixa -->
+    </section>
+
+    <section id="contato" class="flexivel">
+        <article class="borda0">
+            Contato Esquerda
+        </article>
+        <article class="borda0">
+           Contato Centro
+        </article>
+        <article class="borda0">
+           Contato Direita
+        </article>        
+    </section>
+
+    <footer> 
+        <div id="janelaModal" class="JanelaModal">
+            <span id="btnFechar" class="fecharModal">X</span>
+            <img id="imgModal" class="imgModal">
+            <div id="txtModal" class="txtModal"></div>
+        </div>
+    </footer>
+</body>
+</html>

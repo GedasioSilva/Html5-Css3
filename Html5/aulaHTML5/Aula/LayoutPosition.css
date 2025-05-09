@@ -1,0 +1,41 @@
+body{
+    background-color: black;
+    width: 960px; /* o tamanho do Layout*/
+    margin: auto;
+}
+header,nav,aside,section,footer{
+    background-color: rgb(3, 28, 41);
+    border-radius: 8px;
+}
+span{
+    color: white;
+}
+header{
+    height: 100px;
+}
+nav{
+    height: 500px;
+    width: 150px;
+    margin: 15px 15px 15px 0px;
+    float: left;
+}
+
+aside{
+    height: 500px;
+    width: 150px;
+    margin: 15px 0px 15px 15px;
+    float: right;
+}
+
+section{
+        height: 500px;
+        width: 630px;
+        margin: 15px 0px 15px 0px;
+    float: left;
+}
+footer{
+        height: 50px;
+        width: 960px;
+        margin: 0px 0px 0px 0px;
+    float: left;
+}

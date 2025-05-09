@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu de ícones fixo</title>
+</head>
+    <style>
+        .img{
+            width:30px;
+            height:30px;
+        }
+        .menu{
+            background-color:rgb(206, 194, 194);
+            width: 100px;
+            position:fixed;
+            top:0px;
+            left:-48px;
+            display: flex;
+            transition: all 0.5s ease;
+        }
+        .menu a{
+            display: block;/*deixar um elemento abaixo do outro*/
+            text-align: center;
+            padding: 8px;
+            transition: all 0.5s ease; /* pra quando fazer o hover de mudar de cor ir bem devagar*/
+        }
+        .menu a:hover{
+            background-color: red;
+        }
+        .ativo{ /* o elemento que fica ativo quando a pagina e abertar*/
+            background-color: rgb(232, 99, 99);
+        }
+        .barra{
+            background-color: antiquewhite;
+            width: 30px;
+            height: 5px;
+            margin: 7.5px;
+        }
+        .btnMenu{
+            cursor:pointer;
+        }
+        .menuAberto{
+            left:0px;
+        }
+    </style>
+<body>
+    <nav class="menu">
+         <div>
+            <a href="#" title="Home" class="ativo" data-menu><img class="img" src="casa.png"></a>
+            <a href="#" data-menu><img class="img" src="Procura.png"></a>
+            <a href="#" data-menu><img class="img" src="email.png"></a>
+            <a href="#" data-menu><img class="img" src="youtube.png"></a>
+         </div>
+         <div  class="btnMenu">
+                <div class="barra"></div>
+                <div class="barra"></div>
+                <div class="barra"></div>
+         </div>    
+    </nav>
+</body>
+    <script>
+            const menus = document.querySelectorAll('[data-menu]'); /* seleciona todos os elementos que tem a tag data-menu*/
+         
+            menus.forEach(function(e){
+                e.addEventListener('click',function(){
+                    for(i=0;i<menus.length;i++){
+                        menus[i].classList.remove('ativo');
+                    }
+                    e.classList.add('ativo');
+                });
+            });
+
+            const btnMenu=document.getElementsByClassName('btnMenu')[0];/* o [0] é o elemento 0*/
+            const menu = document.getElementsByClassName('menu')[0];/* o [0] é o elemento 0*/
+            btnMenu.addEventListener('click',function(){
+                menu.classList.toggle('menuAberto');
+            });
+    </script>
+</html>

@@ -1,0 +1,13 @@
+html{
+    scroll-behavior: smooth;
+}
+section{
+    height: 600px;
+    color: white;
+}
+#sec1{
+    background-color:red; 
+}
+#sec2{
+    background-color:green;
+}

@@ -1,0 +1,63 @@
+body{
+    margin: auto;
+    width: 960px;
+    background-color: #f0f0f0;
+}
+#cab,footer{
+    background-color: rgb(50, 80, 50);
+    padding: 10px 20px 10px 20px;
+    border-radius: 0px 0px 20px 20px; 
+    color: whitesmoke;
+}
+#parques{
+    height: 700px;
+    background-color: blueviolet;
+    border-radius: 15px; /* Deixar as Bordas Redondas*/
+    padding: 0px 10px 10px 10px;
+}
+
+footer{
+    text-align: center;
+   border-radius: 20px;
+   margin-top: 20px;
+    
+}
+
+#parques article{ 
+    padding-bottom: 1px dashed #AFF ;
+}
+
+.foto-legenda {
+    width: 600px;
+    height: 200px;
+}
+
+figure.foto-legenda{
+    position: relative;
+    border: 8px solid white;
+    box-shadow: 1px 1px 4px black;
+}
+figure.foto-legenda img{
+    width: 100%;
+    height: 100%;
+}
+
+figure.foto-legenda figcaption{
+    opacity: 0;
+    position: absolute;
+    top: 0px;
+    background-color:rgba(0,0,0,.4);
+    color: white;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    transition: opacity 2s;
+}
+figure.foto-legenda:hover figcaption{
+    opacity: 1;
+}
+
+    .foto-legenda:hover{
+        zoom: 120%;
+    }

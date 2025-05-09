@@ -1,0 +1,130 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    overflow-x: hidden;/* tirar a barra de rolagem do eixo X*/
+}
+
+html{
+    scroll-behavior: smooth;/* Pra barra de rolagem ficar mais devagar*/
+}
+header{
+    padding: 15px 0px 15px 0px; /* espaço esquerda e baixo de 15px*/
+    position: fixed;
+    width:100%;/*largura tela toda*/
+    float: left;
+    display: inline;
+    background-color: white;
+    z-index: 9999;/*evita que os elementos fiquem na frente do menu*/
+}
+.banner{ /* cliei uma class pra imagem ficar dentro dela*/
+    display: flex;
+}
+.banner img{ /*pego a imagem da class banner e deixo ela do tamanho da class banner*/
+    width: 100%;
+    height: 100%;
+}
+
+header nav ul{
+    list-style:none; /* pra tirar as bolinhas da teg ul*/
+    text-align: center; /* pra as tags ul ficarem no meio*/
+}
+header nav ul li{
+    display:inline; /* as tags li ficarem em line*/
+}
+header nav ul li a{
+    text-decoration: none; /* tira o estilo da tag A*/
+    text-transform: uppercase;
+    color: #888;
+    font-family: Arial;
+    font-size: 1.2em;
+    padding: 2px 10px; /* distancia entre os elementos da tag a*/
+    display: inline-block;
+}
+header nav ul li a:hover{
+    color: #b6dbf1; /* hover na tag A quando passar o mouse */
+}
+
+section{
+    width: 100%;
+    height: 400px;
+}
+
+section:nth-child(even){ /* aqui posso indicar o número da section que vou formatar, ou odd=impar even=par */
+    background-color: #3c4f60;
+}
+
+section,footer{
+    padding-top: 60px; /* a section tava misturada com o header ai tempo que da espaço no elemento que ta entrando no outro no caso a section que tava entrando dentro da header*/
+    padding-bottom: 60px;
+}
+
+.borda0{
+    border: none; /*Despois que formatar com borda 1 coloca borda0*/
+}
+.borda1{
+    border: 1px solid #000;
+}
+.borda2{
+    border: 1px solid #f00;
+}
+
+.flexivel{ /*pra formatar os section pra eles ficarem espalhados na div*/
+    display: flex;
+    flex-direction: row; /*fluxo em linha*/
+    justify-content: space-between; /* mesmo espaçamento orizontal*/  
+}
+article{
+    width: 100%;
+    text-align: center;
+}
+/*Parallax*/
+
+.parallax{/**/
+    background-attachment:fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position:center center;
+    
+    
+}
+.p1{/* cada sessao vai ter sua imagem com cada imagem uma class essa class é p1*/
+    background-image: url('p1.jpg');
+    
+    
+}
+.p2{
+    background-image: url('p.jpg');
+}
+
+/* Cursos Janela Modal*/
+    .conteinerCursos{
+        justify-content: space-around;
+        align-items: center;
+        align-content: flex;
+        flex-wrap: wrap;
+    }
+    .mini{
+        width:49%;
+        height:48%;
+        padding: 25px;
+        cursor: pointer;
+    }
+/*Modal*/
+.JanelaModal{
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    padding-top: 100px;
+    z-index: 9999999;
+    background-color: rgba(0, 0, 0,0.8);
+}
+.mostraJanelaModal{
+    display: block;
+}
+.escondeJanelaModal{
+    display:none;
+}
